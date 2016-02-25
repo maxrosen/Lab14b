@@ -1,8 +1,3 @@
-// Lab14bv80.java
-// 02-24-15 by Leon Schram
-// This is the provided testing file for the Lab14Bv80 assignment.
-
-
 import java.awt.*;
 import java.applet.*;
 
