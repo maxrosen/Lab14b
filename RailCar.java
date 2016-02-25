@@ -1,11 +1,3 @@
-// RailCar.java
-// 02-24-15 by Leon Schram
-// This is the <RailCar> class that is the 
-// super class for other train classes.
-// This is one of the student starting files
-// of the Lab14b lab assignment.
-
-
 import java.awt.*;
 
 
