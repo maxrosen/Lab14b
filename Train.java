@@ -3,9 +3,13 @@ import java.util.ArrayList;
 
 public class Train
 {
+    //Creates primary train
     ArrayList<RailCar> cars;
+    //Creates secondary, and drawn train
     ArrayList<RailCar> newCars;
+    //Creates ArrayList to identify cars in the order they are intended to be in
     ArrayList<String> carNames;
+    //Creates ArrayList to identify car colors in the order they are intended to be in
     ArrayList<Color> colors;
     int StartX;
     int StartY;
@@ -24,7 +28,9 @@ public class Train
     
     public void addCar(String str, Color color)
     {
+        //Starting X coordinate of train
         StartX+=175;
+        //All if statements create train car into primary ArrayList
         if(str.equals("Locomotive"))
         {
             cars.add(new Locomotive(color, StartX, StartY));
@@ -51,10 +57,10 @@ public class Train
         }
 
     }
-    
+    //Overloaded add method
     public void addCar(int place, String str, Color color)
     {
-        //StartX=place*175+100;
+        //All if statements create train car into primary ArrayList
         if(str.equals("Locomotive"))
         {
             cars.add(place, new Locomotive(color, StartX, StartY));
@@ -84,7 +90,9 @@ public class Train
     
     public void showCars(Graphics g)
     {
+        //Counter
         int k=0;
+        //Adds previously made cars to a new ArrayList in their intended order
         for(String names:carNames)
         {
             if(names.equals("Locomotive"))
@@ -106,6 +114,7 @@ public class Train
             k++;
             newX+=175;
         }
+        //Draws all cars in their intended order
         for(RailCar car:newCars)
         {
             car.drawCar(g);
